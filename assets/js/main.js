@@ -9,3 +9,26 @@ Il menu deve diventare visibile quando facciamo hover  o click ( a vs discrezion
 Ogni link della navbar ha il suo menu nascosto che deve apparire.
 *******************************/
 
+// //var markupAbbonamenti = '<ul class="sub_menu"> <li><a href="">Standard</a></li> <li><a href="">Premium</a></li> <li><a href="">Metal</a></li> <li><a href="">Confronta i piani</a></li> </ul>';
+$(".display_none, .sub_menu li").hide();
+
+// /**********     MOUSE-ENTER     ***************/
+//  $('.sub_menu li').mouseenter(function () { 
+//    $(this).show();
+//  });
+
+// /**********     FUNZIONE AGGIUNGI UL     ***************/
+
+// $('.sub_menu>li').mouseleave(function () { 
+//    $(this).toggle();
+//  });
+// /**********     MOUSE-LEAVE     ***************/
+// //Togli ul aggiunta precedentemente
+
+function subMenu() {
+ $(this).children().show();
+}
+function chiudi() {
+ $(this).children().hide();
+}
+$(".display_none, .sub_menu li").mouseover(subMenu).mouseout(chiudi);
